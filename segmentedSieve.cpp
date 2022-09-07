@@ -17,7 +17,7 @@ using namespace std;
 #define lp1(i, n) for (int i = 1; i <= n; i++)
 #define lp2(i, n) for (int i = 0; i < n; i++)
 #define prnt(a) cout << a
-void getTotalPrime(ll l, ll r)
+ll getTotalPrime(ll l, ll r)
 {
     ll nsqrt = sqrt(l);
     vector<ll> Primes;
@@ -54,19 +54,23 @@ void getTotalPrime(ll l, ll r)
     }
     // FinalPrime[0] = false;
     // FinalPrime[1] = false;
+    ll totalCount = 0;
     for (ll i = 0; i <= (l - r); i++)
     {
         if (FinalPrime[i])
         {
-            cout << i + r << endl;
+            totalCount++;
+            // cout << i + r << endl;
         }
     }
+    return totalCount;
 }
 int main()
 {
     LetsGoCin();
     ll l, r;
     cin >> l >> r;
-    getTotalPrime(l, r);
+    ll res = getTotalPrime(l, r);
+    cout << "Total numbers of prime in the given range are " << res << endl;
     baperBariJa();
 }

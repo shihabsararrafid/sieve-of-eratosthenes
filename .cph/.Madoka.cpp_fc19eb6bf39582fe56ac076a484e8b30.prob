@@ -1,0 +1,1 @@
+{"name":"Local: Madoka","url":"c:\\Programming\\Algorithms\\Sieve Of Eratosthenes\\Madoka.cpp","tests":[{"id":1662516769016,"input":"6\n1\n2\n3\n4\n5\n100000000\n","output":"1\n4\n7\n10\n11\n266666666\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Programming\\Algorithms\\Sieve Of Eratosthenes\\Madoka.cpp","group":"local","local":true}
