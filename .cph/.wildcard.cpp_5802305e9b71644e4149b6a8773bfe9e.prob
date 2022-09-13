@@ -1,0 +1,1 @@
+{"name":"Local: wildcard","url":"c:\\Programming\\Algorithms\\Sieve Of Eratosthenes\\wildcard.cpp","tests":[{"id":1662978751616,"input":"5 5\nrafid\nrafid","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Programming\\Algorithms\\Sieve Of Eratosthenes\\wildcard.cpp","group":"local","local":true}

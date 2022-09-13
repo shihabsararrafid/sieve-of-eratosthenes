@@ -19,15 +19,14 @@ using namespace std;
 int main()
 {
     LetsGoCin();
-    ll t;
-    cin >> t;
-    while (t--)
+    ll n, d, e;
+    cin >> n >> d >> e;
+    e *= 5;
+    ll ans = 1e9;
+    for (int i = 0; i * e <= n; i++)
     {
-        ll n;
-        cin >> n;
-        ll res = (n + ((n / 2) * 2));
-        res += ((n / 3) * 2);
-        cout << res << endl;
+        ans = min(ans, (n - i * e) % d);
     }
+    cout << ans << endl;
     baperBariJa();
 }

@@ -19,22 +19,33 @@ using namespace std;
 int main()
 {
     LetsGoCin();
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    cin >> n;
+    int arr1[n + 2];
+    int arr2[n + 2];
+    vector<bool> check(4000005, false);
+    for (int i = 0; i < n; i++)
     {
-        ll n;
-        cin >> n;
-        string str;
-        cin >> str;
-        ll sum = 0;
-        sum += n;
-        for (ll i = 0; i < (2 * n - 1); i++)
-        {
-            if (str[i] == ')' && str[i + 1] == '(')
-                sum--;
-        }
-        cout << sum << endl;
+        cin >> arr1[i];
+        check[arr1[i]] = true;
     }
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr2[i];
+        check[arr2[i]] = true;
+    }
+    li res = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (check[arr1[i] ^ arr2[j]])
+                res++;
+        }
+    }
+    if (res % 2 == 0)
+        cout << "Karen" << endl;
+    else
+        cout << "Koyomi" << endl;
     baperBariJa();
 }
